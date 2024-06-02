@@ -4,17 +4,69 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: #333;
+  }
+
+  .fixed-top-right {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .header-section {
+    background-color: rgb(202, 39, 39);
+    color: #333;
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .tutorial-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    padding: 20px;
   }
   
+  .tutorial-block {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  
+  h1 {
+    margin-bottom: 10px;
+  }
+  
+  h2 {
+    color: rgb(55, 28, 105);
+  }
+  
+  p {
+    color: #333;
+  }
+  
+  
+
+
+
+
+
+
+  
+  
+  
   header {
-    background-color: #333;
-    color: white;
+    background-color: white;
+    color: #333;
     padding: 1rem;
     text-align: center;
   }
   
   nav a {
-    color: white;
+    color: #333;
     margin: 0 1rem;
     text-decoration: none;
   }
