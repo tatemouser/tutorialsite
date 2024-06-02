@@ -1,23 +1,28 @@
+<!-- ADD IN SWITCHING WORDS LIKE ON PORTFOLIO SITE -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pickleball Instruction</title>
+  <title>How to Play Pickleball</title>
   <link rel="stylesheet" href="public/styles.css">
+  <link rel="stylesheet" href="public/indexStyles.css">
+
 </head>
 <body>
   <header>
     <div class="horizontal-layout">
       <img src="public/Assets/logo_temp.webp" class="headerImage" alt="Logo">
-      <nav>
+      <nav id="navLinks">
         <a href="views/about.html">HOME</a>
-        <a href="../views/rules.html">RULES</a>
-        <a href="../views/drills.html">DRILLS</a>
-        <a href="../views/practices.html">PRACTICES</a>
-        <a href="../views/drawDrills.html">DRAW DRILLS</a>
-        <a href="../views/more.html">MORE</a>
+        <a href="views/rules.html">RULES</a>
+        <a href="views/drills.html">DRILLS</a>
+        <a href="views/practices.html">PRACTICES</a>
+        <a href="views/drawDrills.html">DRAW DRILLS</a>
+        <a href="views/more.html">MORE</a>
       </nav>
+      <button class="dropdown-btn" onclick="toggleDropdown()">☰</button>
     </div>
   </header>
   <div class="header-section"> 
@@ -72,5 +77,11 @@
     </div>
     <p>Welcome to the home page of our basic Node.js website!</p>
   </main>
+  <script>
+    function toggleDropdown() {
+      var navLinks = document.getElementById("navLinks");
+      navLinks.classList.toggle("show");
+    }
+  </script>
 </body>
 </html>

@@ -1,0 +1,77 @@
+/*------------------
+INFO HEADER
+------------------*/
+
+.header-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url('../public/Assets/temp_header_background.jpg');
+  background-size: cover;
+  background-position: center;
+  filter: grayscale(70%);
+  color: white;
+  text-align: center;
+  position: relative;
+  height: 30vw;
+  font-size: 2vw;
+  overflow: hidden; 
+}
+
+.header-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.header-section h1,
+.header-section h4 {
+  position: relative;
+  z-index: 2;
+  margin: 0.5rem 0;
+}
+
+/*------------------
+TUTORIAL
+------------------*/ 
+.tutorial-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.tutorial-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  padding: 20px;
+}
+
+.tutorial-block {
+  position: relative;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+}
+
+.tutorial-title {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent bar */
+  color: white;
+  text-align: center;
+  padding: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.tutorial-title:hover {
+  background-color: #045484;
+}
