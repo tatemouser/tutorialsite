@@ -74,7 +74,7 @@ INFO HEADER
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url('/Assets/temp_header_background.jpg');
+  background-image: url('../public/Assets/temp_header_background.jpg');
   background-size: cover;
   background-position: center;
   filter: grayscale(70%);
