@@ -10,52 +10,174 @@
         <div class="horizontal-layout">
             <img src="../public/Assets/images/pickleball_trophy.png" class="headerImage" alt="Logo">
             <nav id="navLinks">
-                <a href="views/about.html">HOME</a>
+                <a href="index.html">HOME</a>
                 <a href="views/rules.html">RULES</a>
-                <a href="views/drills.html">DRILLS</a>
-                <a href="views/practices.html">PRACTICES</a>
-                <a href="views/drawDrills.html">DRAW DRILLS</a>
-                <a href="views/more.html">MORE</a>
-            </nav>
+                <a style="color: gray">DRILLS</a>
+                <a style="color: gray">PRACTICES</a>
+                <a style="color: gray">DRAW DRILLS</a>
+                <a style="color: gray">MORE</a>
+              </nav>
             <button class="dropdown-btn" onclick="toggleDropdown()">☰</button>
         </div>
     </header>
     <h1>How to Play!</h1>
+
     <div class="button-container">
-        <button class="custom-button" onclick="showContent('beginner')">Beginner</button>
-        <button class="custom-button" onclick="showContent('advanced-beginner')">Advanced Beginner</button>
-        <button class="custom-button" onclick="showContent('expert')">Expert</button>
+        <button class="custom-button" onclick="showSection('beginner')">Beginner</button>
+        <button class="custom-button" onclick="showSection('advanced')">Advanced Beginner</button>
+        <button class="custom-button" onclick="showSection('expert')">Expert</button>
     </div>
 
-    <div id="beginner" class="content-section">
-        <h2>Beginner Content</h2>
-        <p>Content for beginners goes here.</p>
+    
+    <div id="beginner" class="carousel">
+        <div class="carousel-buttons">
+            <button onclick="jumpTo('beginner', 0)">How to Start</button>
+            <button onclick="jumpTo('beginner', 1)">Hitting</button>
+            <button onclick="jumpTo('beginner', 2)">Serving</button>
+            <button onclick="jumpTo('beginner', 3)">Misc</button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item">
+                <ol>
+                    <li>Score points by hitting the ball over the net and into the opponent's court.</li>
+                    <li>Only the serving team can score points.</li>
+                    <li>Games are typically played to 11 points, win by 2.</li>
+                </ol>
+            </div>
+            <div class="carousel-item">
+                <ol>
+                    <li>The ball does not need to bounce before hitting, except after the serve when it must bounce once on each side.</li>
+                    <li>If the ball lands in the "kitchen" (non-volley zone), it must bounce before being hit.</li>
+                    <li>If the ball bounces twice on one side, the point is over.</li>
+                </ol>
+            </div>
+            <div class="carousel-item">
+                <ol>
+                    <li>Must serve underhand.</li>
+                    <li>Keep one foot behind the baseline while serving.</li>
+                    <li>Must serve to the box diagonally opposite the server.</li>
+                    <li>Upon fault, the next player serves.</li>
+                    <li>A serve is considered a fault if it does not land in the diagonal box or hits the net.</li>
+                </ol>
+            </div>
+            <div class="carousel-item">
+                <ol>
+                    <li>Games are typically played to 11 points, win by 2.</li>
+                    <li>Each player serves until a fault is made, then the serve passes to the next player.</li>
+                    <li>Call lines and faults fairly. Respect opponents and maintain good sportsmanship.</li>
+                </ol>
+            </div>
+        </div>
+        
+        <div class="carousel-nav">
+            <button onclick="showPrev('beginner')">❮</button>
+            <button onclick="showNext('beginner')">❯</button>
+        </div>
     </div>
 
-    <div id="advanced-beginner" class="content-section">
-        <h2>Advanced Beginner Content</h2>
-        <p>Content for advanced beginners goes here.</p>
+
+
+
+
+
+
+
+    <div id="advanced" class="carousel" style="display:none;">
+        <div class="carousel-buttons">
+            <button onclick="jumpTo('advanced', 0)">How to Start</button>
+            <button onclick="jumpTo('advanced', 1)">Hitting</button>
+            <button onclick="jumpTo('advanced', 2)">Serving</button>
+            <button onclick="jumpTo('advanced', 2)">Misc</button>
+        </div>
+
+        <div class="carousel-inner">
+            <div class="carousel-item">
+                <ol>
+                    <li>Score points by hitting the ball over the net and into the opponent's court.</li>
+                    <li>Only the serving team can score points.</li>
+                    <li>Games are typically played to 11 points, win by 2.</li>
+                </ol>
+            </div>
+            <div class="carousel-item">
+                <ol>
+                    <li>The ball does not need to bounce before hitting, except after the serve when it must bounce once on each side.</li>
+                    <li>If the ball lands in the "kitchen" (non-volley zone), it must bounce before being hit.</li>
+                    <li>If the ball bounces twice on one side, the point is over.</li>
+                </ol>
+            </div>
+            <div class="carousel-item">
+                <ol>
+                    <li>Must serve underhand.</li>
+                    <li>Keep one foot behind the baseline while serving.</li>
+                    <li>Must serve to the box diagonally opposite the server.</li>
+                    <li>Upon fault, the next player serves.</li>
+                    <li>A serve is considered a fault if it does not land in the diagonal box or hits the net.</li>
+                </ol>
+            </div>
+            <div class="carousel-item">
+                <ol>
+                    <li>Games are typically played to 11 points, win by 2.</li>
+                    <li>Each player serves until a fault is made, then the serve passes to the next player.</li>
+                    <li>Call lines and faults fairly. Respect opponents and maintain good sportsmanship.</li>
+                </ol>
+            </div>
+        </div>
+        <div class="carousel-nav">
+            <button onclick="showPrev('advanced')">❮</button>
+            <button onclick="showNext('advanced')">❯</button>
+        </div>
     </div>
 
-    <div id="expert" class="content-section">
-        <h2>Expert Content</h2>
-        <p>Content for experts goes here.</p>
+    <div id="expert" class="carousel" style="display:none;">
+        <div class="carousel-buttons">
+            <button onclick="jumpTo('expert', 0)">How to Start</button>
+            <button onclick="jumpTo('expert', 1)">Hitting</button>
+            <button onclick="jumpTo('expert', 2)">Serving</button>
+            <button onclick="jumpTo('expert', 2)">Misc</button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-inner">
+                <div class="carousel-item">
+                    <ol>
+                        <li>Score points by hitting the ball over the net and into the opponent's court.</li>
+                        <li>Only the serving team can score points.</li>
+                        <li>Games are typically played to 11 points, win by 2.</li>
+                    </ol>
+                </div>
+                <div class="carousel-item">
+                    <ol>
+                        <li>The ball does not need to bounce before hitting, except after the serve when it must bounce once on each side.</li>
+                        <li>If the ball lands in the "kitchen" (non-volley zone), it must bounce before being hit.</li>
+                        <li>If the ball bounces twice on one side, the point is over.</li>
+                    </ol>
+                </div>
+                <div class="carousel-item">
+                    <ol>
+                        <li>Must serve underhand.</li>
+                        <li>Keep one foot behind the baseline while serving.</li>
+                        <li>Must serve to the box diagonally opposite the server.</li>
+                        <li>Upon fault, the next player serves.</li>
+                        <li>A serve is considered a fault if it does not land in the diagonal box or hits the net.</li>
+                    </ol>
+                </div>
+                <div class="carousel-item">
+                    <ol>
+                        <li>Games are typically played to 11 points, win by 2.</li>
+                        <li>Each player serves until a fault is made, then the serve passes to the next player.</li>
+                        <li>Call lines and faults fairly. Respect opponents and maintain good sportsmanship.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-nav">
+            <button onclick="showPrev('expert')">❮</button>
+            <button onclick="showNext('expert')">❯</button>
+        </div>
     </div>
-
-    <script>
-        function showContent(sectionId) {
-            // Hide all content sections
-            const sections = document.querySelectorAll('.content-section');
-            sections.forEach(section => {
-                section.classList.remove('active');
-            });
-
-            // Show the selected content section
-            const activeSection = document.getElementById(sectionId);
-            if (activeSection) {
-                activeSection.classList.add('active');
-            }
-        }
-    </script>
+    <div class="empty-container">
+    </div>
+    <footer>
+    </footer>
+    <script src="../public/Assets/js/rulesScript.js"></script>
 </body>
 </html>

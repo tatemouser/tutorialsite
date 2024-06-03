@@ -3,6 +3,10 @@ h2 {
     text-align: center;
 }
 
+/*----------------------
+RULES BUTTON HEADERS
+------------------------*/
+
 .button-container {
     display: flex;
     justify-content: center;
@@ -34,6 +38,10 @@ h2 {
     transform: scale(0.95);
 }
 
+/*----------------------
+PICK RULES COMPLEXITY
+------------------------*/
+
 @media (max-width: 600px) {
     .button-container {
         flex-direction: column;
@@ -46,12 +54,111 @@ h2 {
     }
 }
 
-.content-section {
-    display: none;
+
+/*----------------------
+RULES CONTENT
+------------------------*/
+.carousel {
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+    width: 60%;
 }
 
-.active {
-    display: block; 
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: auto;
+}
+
+.carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+    text-align: left;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.carousel-nav button {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    margin: 0 10px 0 10px;
+    align-self: center;
+}
+
+.carousel-buttons {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.carousel-buttons button {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 20px; /* Adjust padding */
+    cursor: pointer;
+    margin: 0 5px; /* Adjust margin */
+    width: 20%; /* Set width to a percentage */
+}
+
+.carousel-buttons button.active {
+    background-color: #045484;
+}
+
+.carousel-item h2, .carousel-item p, .carousel-item ol {
+    width: 80%;
+    max-width: 800px;
+    margin: 10px 0;
+}
+
+.carousel-item ol {
+    list-style-type: none; /* Remove default list styles */
+    padding: 0;
+    margin: 0;
+}
+
+.carousel-item ol li {
+    margin-bottom: 10px; /* Add some spacing between list items */
+    font-size: 1.2em; /* Increase font size */
+    line-height: 1.5; /* Adjust line height for better readability */
+}
+
+.carousel-item ol li:before {
+    content: "•"; /* Use a bullet character for list items */
+    color: #045484; /* Change bullet color */
+    font-weight: bold; /* Make bullet bold */
+    margin-right: 5px; /* Add space between bullet and text */
 }
 
 
+@media (max-width: 768px) {
+    .carousel-buttons button {
+        display: block;
+        width: 100%; /* Set width to 100% for stacking */
+        margin-bottom: 5px; /* Add some spacing between stacked buttons */
+    }
+}
+
+
+.empty-container {
+    margin: 200px;
+}
