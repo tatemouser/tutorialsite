@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>The Rules</title>
+    <link rel="stylesheet" href="../public/styles.css">
+    <link rel="stylesheet" href="../public/rulesStyles.css">
+</head>
+<body>
+    <header>
+        <div class="horizontal-layout">
+            <img src="../public/Assets/images/pickleball_trophy.png" class="headerImage" alt="Logo">
+            <nav id="navLinks">
+                <a href="views/about.html">HOME</a>
+                <a href="views/rules.html">RULES</a>
+                <a href="views/drills.html">DRILLS</a>
+                <a href="views/practices.html">PRACTICES</a>
+                <a href="views/drawDrills.html">DRAW DRILLS</a>
+                <a href="views/more.html">MORE</a>
+            </nav>
+            <button class="dropdown-btn" onclick="toggleDropdown()">☰</button>
+        </div>
+    </header>
+    <h1>How to Play!</h1>
+    <div class="button-container">
+        <button class="custom-button" onclick="showContent('beginner')">Beginner</button>
+        <button class="custom-button" onclick="showContent('advanced-beginner')">Advanced Beginner</button>
+        <button class="custom-button" onclick="showContent('expert')">Expert</button>
+    </div>
+
+    <div id="beginner" class="content-section">
+        <h2>Beginner Content</h2>
+        <p>Content for beginners goes here.</p>
+    </div>
+
+    <div id="advanced-beginner" class="content-section">
+        <h2>Advanced Beginner Content</h2>
+        <p>Content for advanced beginners goes here.</p>
+    </div>
+
+    <div id="expert" class="content-section">
+        <h2>Expert Content</h2>
+        <p>Content for experts goes here.</p>
+    </div>
+
+    <script>
+        function showContent(sectionId) {
+            // Hide all content sections
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+
+            // Show the selected content section
+            const activeSection = document.getElementById(sectionId);
+            if (activeSection) {
+                activeSection.classList.add('active');
+            }
+        }
+    </script>
+</body>
+</html>

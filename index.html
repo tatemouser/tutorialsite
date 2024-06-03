@@ -8,12 +8,13 @@
   <title>How to Play Pickleball</title>
   <link rel="stylesheet" href="public/styles.css">
   <link rel="stylesheet" href="public/indexStyles.css">
-
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script src="public/Assets/js/script.js" defer></script>
 </head>
 <body>
   <header>
     <div class="horizontal-layout">
-      <img src="public/Assets/logo_temp.webp" class="headerImage" alt="Logo">
+      <img src="public/Assets/images/pickleball_trophy.png" class="headerImage" alt="Logo">
       <nav id="navLinks">
         <a href="views/about.html">HOME</a>
         <a href="views/rules.html">RULES</a>
@@ -26,57 +27,109 @@
     </div>
   </header>
   <div class="header-section"> 
-    <h1>Pickleball Instruction Beyond The Obvious </h1>
-    <h4>The higher level of pickleball you're going after, the higher level of instruction you must receive. </h4>
-    <h4>This is where you'll get it.</h4>
+    <div class="horizontal-layout">
+      <h1>Lessons for everyone</h1>
+      <!-- <h1 class="subheader-text"><span class="auto-type" id="rolePlaceholder"></span></h1> -->
+      <!-- <img src="public/Assets/images/pickleball-5635515_640.png" class="rotate" width="40px" height="40px" /> -->
+    </div>
   </div>
   <main>
-    <div class="tutorial-section"> 
-      <a href="https://www.soccerdrive.com/soccer-skills-videos" target="_blank" class="tutorial-link">
-        <div class="tutorial-block" style="background-image: url('public/Assets/tutorial_block_temp.jpg');">
-          <div class="tutorial-title">
-            <h2>Swing</h2>
-          </div>
-        </div>
-      </a>      
-      <a href="https://www.soccerdrive.com/soccer-skills-videos" target="_blank" class="tutorial-link">
-        <div class="tutorial-block" style="background-image: url('public/Assets/tutorial_block_temp.jpg');">
-          <div class="tutorial-title">
-            <h2>Serve</h2>
-          </div>
-        </div>
-      </a>      
-      <a href="https://www.soccerdrive.com/soccer-skills-videos" target="_blank" class="tutorial-link">
-        <div class="tutorial-block" style="background-image: url('public/Assets/tutorial_block_temp.jpg');">
-          <div class="tutorial-title">
-            <h2>Footwork</h2>
-          </div>
-        </div>
-      </a>      
-      <a href="https://www.soccerdrive.com/soccer-skills-videos" target="_blank" class="tutorial-link">
-        <div class="tutorial-block" style="background-image: url('public/Assets/tutorial_block_temp.jpg');">
-          <div class="tutorial-title">
-            <h2>Fake</h2>
-          </div>
-        </div>
-      </a>      
-      <a href="https://www.soccerdrive.com/soccer-skills-videos" target="_blank" class="tutorial-link">
-        <div class="tutorial-block" style="background-image: url('public/Assets/tutorial_block_temp.jpg');">
-          <div class="tutorial-title">
-            <h2>Pass</h2>
-          </div>
-        </div>
-      </a>      
-      <a href="https://www.soccerdrive.com/soccer-skills-videos" target="_blank" class="tutorial-link">
-        <div class="tutorial-block" style="background-image: url('public/Assets/tutorial_block_temp.jpg');">
-          <div class="tutorial-title">
-            <h2>Split</h2>
-          </div>
-        </div>
-      </a>      
+    <div class ="tutorial-header">
+      <h1>Tutorials</h1>
+      <hr>
     </div>
-    <p>Welcome to the home page of our basic Node.js website!</p>
+    <div class="tutorial-section"> 
+      <a href="https://www.wikihow.com/Pickleball-Serve-Rules" target="_blank" class="tutorial-link">
+        <div class="tutorial-block" style="background-image: url('/public/Assets/images/court.png');">
+          <div class="tutorial-title">
+            <h2>Serving</h2>
+          </div>
+        </div>
+      </a>      
+      <a href="https://www.wikihow.com/Keep-Score-in-Pickleball" target="_blank" class="tutorial-link">
+        <div class="tutorial-block" style="background-image: url('/public/Assets/images/court.png');">
+          <div class="tutorial-title">
+            <h2>Court Position</h2>
+          </div>
+        </div>
+      </a>      
+      <a href="https://www.wikihow.com/Pickleball-Tips" target="_blank" class="tutorial-link">
+        <div class="tutorial-block" style="background-image: url('public/Assets/images/court.png');">
+          <div class="tutorial-title">
+            <h2>Dink</h2>
+          </div>
+        </div>
+      </a>      
+      <a href="https://www.wikihow.com/Pickleball-Tips" target="_blank" class="tutorial-link">
+        <div class="tutorial-block" style="background-image: url('public/Assets/images/court.png');">
+          <div class="tutorial-title">
+            <h2>Shot Variety</h2>
+          </div>
+        </div>
+      </a>      
+      <a href="https://www.wikihow.com/Pickleball-Tips" target="_blank" class="tutorial-link">
+        <div class="tutorial-block" style="background-image: url('public/Assets/images/court.png');">
+          <div class="tutorial-title">
+            <h2>Offensive Play</h2>
+          </div>
+        </div>
+      </a>      
+      <a href="https://www.wikihow.com/Pickleball-Tips" target="_blank" class="tutorial-link">
+        <div class="tutorial-block" style="background-image: url('public/Assets/images/court.png');">
+          <div class="tutorial-title">
+            <h2>Defensive Play</h2>
+          </div>
+        </div>
+      </a>   
+      <a href="https://www.wikihow.com/Pickleball-Tips" target="_blank" class="tutorial-link">
+        <div class="tutorial-block" style="background-image: url('public/Assets/images/court.png');">
+          <div class="tutorial-title">
+            <h2>Ground Stroke</h2>
+          </div>
+        </div>
+      </a>      
+      <a href="https://www.wikihow.com/Pickleball-Tips" target="_blank" class="tutorial-link">
+        <div class="tutorial-block" style="background-image: url('public/Assets/images/court.png');">
+          <div class="tutorial-title">
+            <h2>Volley</h2>
+          </div>
+        </div>
+      </a>     
+      <a href="https://www.wikihow.com/Pickleball-Tips" target="_blank" class="tutorial-link">
+        <div class="tutorial-block" style="background-image: url('public/Assets/images/court.png');">
+          <div class="tutorial-title">
+            <h2>Grip</h2>
+          </div>
+        </div>
+      </a>    
+
+      <a href="https://www.wikihow.com/Pickleball-Tips" target="_blank" class="tutorial-link">
+        <div class="tutorial-block" style="background-image: url('public/Assets/images/court.png');">
+          <div class="tutorial-title">
+            <h2>Aim</h2>
+          </div>
+        </div>
+      </a>     
+      <a href="https://www.wikihow.com/Choose-a-Pickleball-Paddle" target="_blank" class="tutorial-link">
+        <div class="tutorial-block" style="background-image: url('public/Assets/images/court.png');">
+          <div class="tutorial-title">
+            <h2>Equipment</h2>
+          </div>
+        </div>
+      </a> 
+      <a href="https://www.wikihow.com/Pickleball-Tips" target="_blank" class="tutorial-link">
+        <div class="tutorial-block" style="background-image: url('public/Assets/images/court.png');">
+          <div class="tutorial-title">
+            <h2>Strategy</h2>
+          </div>
+        </div>
+      </a> 
+    </div>
   </main>
+  <footer>
+    <h1>"If the sun is out, i'm out."</h1>
+  </footer>
+
   <script>
     function toggleDropdown() {
       var navLinks = document.getElementById("navLinks");

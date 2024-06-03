@@ -1,9 +1,10 @@
+@import "compass/css3";
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #333;
 }
 
 .horizontal-layout {
@@ -20,7 +21,6 @@ header {
   position: relative;
   display: flex;
   justify-content: flex-end; 
-  color: white;
   text-align: center;
   padding: 1rem;
   font-size: 2vh;
@@ -60,10 +60,10 @@ header nav a {
 }
 
 .headerImage {
-  width: 10em;
-  height: 100%;
+  width: auto;
+  height: 80%;
   position: absolute;
-  left: 20px;
+  left: 2vw;
   bottom: 0;
   z-index: 10;
 }
@@ -81,6 +81,7 @@ main {
     color: white;
     font-size: 8vw;
     cursor: pointer;
+    
   }
 
   #navLinks {
@@ -115,5 +116,53 @@ main {
     justify-content: flex-end;
     gap: 20px;
   }
+}
+
+/*------------------
+FOOTER
+------------------*/
+
+footer {
+  background-color: #1d401d; 
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-size: 2vh;
+  min-height: 70px;
+}
+
+footer::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3vh;
+  background-color: #2c6533;
+}
+
+.footer-content {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1d401d; 
+  margin-top: 3vh;
+}
+
+footer nav {
+  display: flex;
+  justify-content: center;
+  gap: 4vw;
+}
+
+footer nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
 }
 

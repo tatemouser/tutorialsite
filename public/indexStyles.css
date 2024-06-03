@@ -10,11 +10,11 @@ INFO HEADER
   background-image: url('../public/Assets/temp_header_background.jpg');
   background-size: cover;
   background-position: center;
-  filter: grayscale(70%);
+  filter: grayscale(30%);
   color: white;
   text-align: center;
   position: relative;
-  height: 30vw;
+  height: 44vw;
   font-size: 2vw;
   overflow: hidden; 
 }
@@ -31,6 +31,7 @@ INFO HEADER
 }
 
 .header-section h1,
+.header-section img,
 .header-section h4 {
   position: relative;
   z-index: 2;
@@ -39,7 +40,19 @@ INFO HEADER
 
 /*------------------
 TUTORIAL
-------------------*/ 
+------------------*/
+.tutorial-header {
+  color: #045484;
+}
+
+.tutorial-header hr {
+  width: 150px;
+  height: 2px;
+  background-color: #045484;
+  border: none;
+  margin: 0.5em auto;
+}
+
 .tutorial-link {
   text-decoration: none;
   color: inherit;
@@ -47,14 +60,14 @@ TUTORIAL
 
 .tutorial-section {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjusted grid layout */
   grid-gap: 20px;
   padding: 20px;
 }
 
 .tutorial-block {
   position: relative;
-  height: 200px;
+  height: 20vw;
   background-size: cover;
   background-position: center;
   border-radius: 10px;
@@ -74,4 +87,17 @@ TUTORIAL
 
 .tutorial-title:hover {
   background-color: #045484;
+}
+
+.rotate {
+  animation: rotation 8s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
 }
