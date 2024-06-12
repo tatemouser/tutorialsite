@@ -67,16 +67,25 @@ TUTORIAL
 
 .tutorial-block {
   position: relative;
-  height: 20vw;
-  background-size: cover;
-  background-position: center;
+  height: 30vw;
   border-radius: 10px;
   overflow: hidden;
   display: flex;
   align-items: flex-end;
 }
 
+.tutorial-block img {
+  /* opacity: 0.5;  */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 .tutorial-title {
+  position: relative;
+  z-index: 1;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent bar */
   color: white;
