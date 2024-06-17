@@ -156,6 +156,13 @@ RULES CONTENT
         width: 100%; /* Set width to 100% for stacking */
         margin-bottom: 5px; /* Add some spacing between stacked buttons */
     }
+
+    .carousel {
+        position: relative;
+        margin: auto;
+        overflow: hidden;
+        width: 80%;
+    }
 }
 
 

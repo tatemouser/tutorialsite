@@ -74,11 +74,12 @@
   gap: 20px;
   padding: 6.5vw;
   justify-content: center;
+  
 }
 
 .tutorial-block {
   width: 140px;
-  height: 28vh;
+  height: auto;
   border-radius: 10px;
   overflow: hidden;
   display: flex;
@@ -129,49 +130,6 @@
 
 /* Styles for smaller screens */
 @media (max-width: 768px) {
-  .tutorial-section {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
-  }
-
-  .tutorial-block {
-    width: 25vw;
-    height: 28vh;
-    border-radius: 10px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: 5px solid #045484;
-    box-sizing: border-box;
-    font-size: 0.5rem;
-  }
-
-  .tutorial-block img {
-    width: 100%;
-    height: 75%;
-    object-fit: cover; /* Ensures the image covers the entire container without distortion */
-    display: block; /* Removes any space under the image */
-  }
-  
-  .tutorial-title {
-    width: 100%;
-    height: 13vh;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    text-align: center;
-    padding: 5px;
-    box-sizing: border-box;
-    transition: background-color 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-top: auto;
-  }
-
   .header-section {
     height: 60vw;
   }
@@ -185,3 +143,5 @@
     font-size: 2.5vh;
   }
 }
+
+

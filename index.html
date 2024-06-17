@@ -148,22 +148,5 @@
   <footer>
     <h1>"If the sun is out, I'm out."</h1>
   </footer>
-  <script>
-document.addEventListener('DOMContentLoaded', function () {
-  var videoElements = document.querySelectorAll('video');
-
-  videoElements.forEach(function(videoElement) {
-    videoElement.controls = false;
-
-    videoElement.addEventListener('play', function () {
-      this.controls = false;
-    });
-
-    videoElement.addEventListener('pause', function () {
-      this.controls = false;
-    });
-  });
-});
-  </script>
 </body>
 </html>
