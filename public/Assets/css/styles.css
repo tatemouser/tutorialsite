@@ -50,7 +50,6 @@ header .horizontal-layout {
 header nav {
   display: flex;
   justify-content: center;
-  gap: 4vw; 
 }
 
 header nav a {
@@ -113,13 +112,16 @@ main {
   #navLinks {
     display: flex;
     justify-content: flex-end;
-    gap: 20px;
+    gap: 30px;
   }
 }
 
 /*------------------
 FOOTER
 ------------------*/
+.empty-container {
+  margin: 450px;
+}
 
 footer {
   background-color: #1d401d; 
