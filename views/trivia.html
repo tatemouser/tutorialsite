@@ -8,25 +8,26 @@
     <link rel="stylesheet" href="../public/Assets/css/triviaStyles.css">
     <script src="../public/Assets/js/script.js"></script>
     <script src="../public/Assets/js/triviaScript.js"></script>
-
 </head>
 <body>
     <header>
         <div class="horizontal-layout">
-            <!-- <img src="../public/Assets/images/logo.png" class="headerImage" alt="Logo"> -->
             <nav id="navLinks">
-            <a href="../index.html">HOME</a>
-            <a href="rules.html">RULES</a>
-            <a href="trivia.html">TRIVIA GAME</a>
-            <a style="color: gray">DRILLS</a>
-            <a style="color: gray">DRAW DRILLS</a>
-            <a style="color: gray">MORE</a>
-          </nav>
-          <button class="dropdown-btn" onclick="toggleDropdown()">☰</button>
+                <a href="../index.html">HOME</a>
+                <a href="rules.html">RULES</a>
+                <a href="trivia.html">TRIVIA GAME</a>
+                <a style="color: gray">DRILLS</a>
+                <a style="color: gray">DRAW DRILLS</a>
+                <a style="color: gray">MORE</a>
+            </nav>
+            <button class="dropdown-btn" onclick="toggleDropdown()">☰</button>
         </div>
     </header>
-
-    <h1>Quiz Game</h1>
+    <h1></h1>
+    <div class="difficulty-container">
+        <button id="easyButton">Easy Set</button>
+        <button id="hardButton">Hard Set</button>
+    </div>
     <div id="quiz-container">
         <button id="start-btn">Start Quiz</button>
         <div id="question-container" class="hide">
@@ -37,11 +38,15 @@
                 <p>Correct: <span id="correct-counter">0</span></p>
                 <p>Wrong: <span id="wrong-counter">0</span></p>
             </div>
+            <button id="end-btn" class="btn hide">End Quiz</button>
         </div>
+        <div class="net-container">
+            <img src="../public/Assets/images/net.png" class="net" alt="Net" id="netImage">
+        </div>
+        
     </div>
-    <div class="empty-container">
-    </div>
-    <footer>
-    </footer>
+
+    <div class="empty-container"></div>
+    <footer></footer>
 </body>
 </html>

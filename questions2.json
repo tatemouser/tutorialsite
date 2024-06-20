@@ -1,0 +1,29 @@
+[
+    {
+        "question": "What is the capital of France tom?",
+        "answers": [
+            { "text": "Paris", "correct": true },
+            { "text": "London", "correct": false },
+            { "text": "Berlin", "correct": false },
+            { "text": "Madrid", "correct": false }
+        ]
+    },
+    {
+        "question": "What is 2 + 2 tom?",
+        "answers": [
+            { "text": "3", "correct": false },
+            { "text": "4", "correct": true },
+            { "text": "5", "correct": false },
+            { "text": "6", "correct": false }
+        ]
+    },
+    {
+        "question": "What is the color of the sky tom?",
+        "answers": [
+            { "text": "Blue", "correct": true },
+            { "text": "Green", "correct": false },
+            { "text": "Red", "correct": false },
+            { "text": "Yellow", "correct": false }
+        ]
+    }
+]

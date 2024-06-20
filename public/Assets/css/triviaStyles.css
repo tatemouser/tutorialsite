@@ -5,15 +5,26 @@ h1 {
     text-align: center;
 }
 
+.net {
+    width: auto;
+    height: 40px;
+    transform: rotate(90deg);
+}
+
+#netImage {
+    opacity: 0;
+}
+
 #quiz-container {
+    position: relative;
     background-color: #2c6533;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     padding: 2vh 2vw;
-    margin: 2vh auto;
     width: 90%;
     max-width: 600px;
     text-align: center;
+    margin: 0 auto; /* Center the container on the page */
 }
 
 #question-container.hide {
@@ -29,11 +40,10 @@ h1 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 1vh;
     margin: 2vh 0;
 }
 
-#quiz-container button {
+button {
     background-color: #045484;
     color: white;
     border: none;
@@ -42,21 +52,43 @@ h1 {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
+    position: relative;
     flex: 1 1 calc(50% - 1vh);
     max-width: calc(50% - 1vh);
-    border: 5px solid white;
 }
 
-#quiz-container button:hover {
+button:hover {
     background-color: #003e64;
 }
 
-#quiz-container button:focus {
+button:focus {
     outline: none;
 }
 
-#quiz-container button.hide {
+button.hide {
     display: none;
+}
+
+#quiz-container .btn-answer {
+    border: 3px solid white;
+    border-radius: 0px;
+}
+
+#quiz-container .btn-answer::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 5px;
+    height: 100%;
+    background-color: white;
+}
+
+#quiz-container .btn-answer.btn-left::after {
+    left: 60%;
+}
+
+#quiz-container .btn-answer.btn-right::after {
+    right: 60%;
 }
 
 #counters {
@@ -70,9 +102,53 @@ h1 {
     margin: 0;
 }
 
+.net-container {
+    position: absolute;
+    bottom: 130px; /* Adjusts the position of the net image */
+    left: 52%;
+    transform: translateX(-50%);
+}
+
+.difficulty-container {
+    margin-top: 20px; /* Adjust margin top as needed */
+    text-align: center; /* Center aligns inline elements */
+    padding: 20px; /* Adjust padding as needed */
+}
+
+#easyButton,
+#hardButton {
+    display: inline-block; /* Display buttons inline with block-level features */
+    width: 300px;
+    margin: 10px; /* Adjust margin between buttons */
+    padding: 10px;
+    font-size: 16px;
+    background-color: #045484;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#easyButton.active,
+#hardButton.active {
+    background-color: #000000;
+}
+
+#easyButton:hover,
+#hardButton:hover {
+    background-color: #000000;
+}
+
+
+
+
 @media (max-width: 600px) {
-    #quiz-container button {
-        flex: 1 1 100%;
-        max-width: 100%;
+    button {
+        flex: 1 1 calc(50% - 1vh);
+        max-width: calc(50% - 1vh);
+    }
+
+    .net-container {
+        bottom: 125px; /* Adjust for smaller screens if needed */
+        left: 53%;
     }
 }

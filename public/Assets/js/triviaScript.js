@@ -7,41 +7,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const endBtn = document.createElement('button');
     const correctCounter = document.getElementById('correct-counter');
     const wrongCounter = document.getElementById('wrong-counter');
+    const netImage = document.getElementById('netImage');
+    const easyButton = document.getElementById('easyButton');
+    const hardButton = document.getElementById('hardButton');
 
     let currentQuestionIndex = 0;
     let correctCount = 0;
     let wrongCount = 0;
     let shuffledQuestions = [];
-
-    const questions = [
-        {
-            question: "What is the capital of France?",
-            answers: [
-                { text: "Paris", correct: true },
-                { text: "London", correct: false },
-                { text: "Berlin", correct: false },
-                { text: "Madrid", correct: false }
-            ]
-        },
-        {
-            question: "What is 2 + 2?",
-            answers: [
-                { text: "3", correct: false },
-                { text: "4", correct: true },
-                { text: "5", correct: false },
-                { text: "6", correct: false }
-            ]
-        },
-        {
-            question: "What is the color of the sky?",
-            answers: [
-                { text: "Blue", correct: true },
-                { text: "Green", correct: false },
-                { text: "Red", correct: false },
-                { text: "Yellow", correct: false }
-            ]
-        }
-    ];
+    let questions;
 
     startBtn.addEventListener('click', startQuiz);
     restartBtn.addEventListener('click', restartQuiz);
@@ -51,13 +25,65 @@ document.addEventListener('DOMContentLoaded', () => {
     endBtn.classList.add('btn', 'hide');
     questionContainer.appendChild(endBtn);
 
+    easyButton.addEventListener('click', function() {
+        selectDifficulty('easy', easyButton, hardButton);
+    });
+
+    hardButton.addEventListener('click', function() {
+        selectDifficulty('hard', hardButton, easyButton);
+    });
+
     function startQuiz() {
+        const selectedDifficulty = getSelectedDifficulty();
+        if (!selectedDifficulty) {
+            alert('Please select a difficulty level before starting the game.');
+            return;
+        }
         startBtn.classList.add('hide');
         questionContainer.classList.remove('hide');
         endBtn.classList.remove('hide');
-        shuffledQuestions = shuffleArray(questions);
-        currentQuestionIndex = 0;
-        setNextQuestion();
+        fetchQuestionsAndStart(selectedDifficulty);
+        netImage.style.opacity = '1';
+    }
+
+    function selectDifficulty(difficulty, selectedButton, otherButton) {
+        selectedButton.classList.add('active');
+        otherButton.classList.remove('active');
+        selectedButton.dataset.selected = true;
+        otherButton.dataset.selected = false;
+    }
+
+    function getSelectedDifficulty() {
+        if (easyButton.dataset.selected === 'true') {
+            return 'easy';
+        }
+        if (hardButton.dataset.selected === 'true') {
+            return 'hard';
+        }
+        return null;
+    }
+
+    function fetchQuestionsAndStart(difficulty) {
+        let questionsFile;
+        if (difficulty === 'easy') {
+            questionsFile = '../questions1.json';
+        } else if (difficulty === 'hard') {
+            questionsFile = '../questions2.json';
+        } else {
+            console.error('Invalid difficulty specified.');
+            return;
+        }
+
+        fetch(questionsFile)
+            .then(response => response.json())
+            .then(data => {
+                questions = data;
+                shuffledQuestions = shuffleArray(questions);
+                setNextQuestion();
+            })
+            .catch(error => {
+                console.error('Error loading questions:', error);
+            });
     }
 
     function setNextQuestion() {
@@ -67,10 +93,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function showQuestion(question) {
         questionElement.innerText = question.question;
-        question.answers.forEach(answer => {
+        question.answers.forEach((answer, index) => {
             const button = document.createElement('button');
             button.innerText = answer.text;
-            button.classList.add('btn');
+            button.classList.add('btn', 'btn-answer');
+            if (index % 2 === 0) {
+                button.classList.add('btn-left');
+            } else {
+                button.classList.add('btn-right');
+            }
             if (answer.correct) {
                 button.dataset.correct = answer.correct;
             }
@@ -114,6 +145,11 @@ document.addEventListener('DOMContentLoaded', () => {
         endBtn.classList.add('hide');
         startBtn.classList.remove('hide');
         questionContainer.classList.add('hide');
+        netImage.style.opacity = '0';
+        easyButton.classList.remove('active');
+        hardButton.classList.remove('active');
+        easyButton.dataset.selected = false;
+        hardButton.dataset.selected = false;
     }
 
     function clearStatusClass(element) {
