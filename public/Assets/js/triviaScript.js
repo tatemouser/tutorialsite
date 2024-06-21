@@ -44,6 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
         endBtn.classList.remove('hide');
         fetchQuestionsAndStart(selectedDifficulty);
         netImage.style.opacity = '1';
+        netImage.style.width = 'initial';
     }
 
     function selectDifficulty(difficulty, selectedButton, otherButton) {
@@ -146,6 +147,7 @@ document.addEventListener('DOMContentLoaded', () => {
         startBtn.classList.remove('hide');
         questionContainer.classList.add('hide');
         netImage.style.opacity = '0';
+        netImage.style.width = '1px';
         easyButton.classList.remove('active');
         hardButton.classList.remove('active');
         easyButton.dataset.selected = false;

@@ -11,8 +11,32 @@ h1 {
     transform: rotate(90deg);
 }
 
+.dropdown-btn {
+    background-color: transparent;
+    border: initial;
+    padding: initial;
+    border-radius: initial;
+    cursor: initial;
+    transition: none;
+    position: static;
+    flex: initial;
+    max-width: initial;
+}
+
+.dropdown-btn:hover {
+    background-color: transparent;
+}
+
+.dropdown-btn:focus {
+    outline: initial;
+}
+
+.dropdown-btn.hide {
+    display: inline;
+}
+
 #netImage {
-    opacity: 0;
+    width: 1px;
 }
 
 #quiz-container {
@@ -24,7 +48,7 @@ h1 {
     width: 90%;
     max-width: 600px;
     text-align: center;
-    margin: 0 auto; /* Center the container on the page */
+    margin: 0 auto;
 }
 
 #question-container.hide {
@@ -34,6 +58,8 @@ h1 {
 #question {
     font-size: 1.5em;
     margin: 2vh 0;
+    background-color: white;
+    min-height: 75px
 }
 
 #answer-buttons {
@@ -69,9 +95,11 @@ button.hide {
     display: none;
 }
 
+
 #quiz-container .btn-answer {
     border: 3px solid white;
     border-radius: 0px;
+    margin: 0;
 }
 
 #quiz-container .btn-answer::after {
@@ -104,22 +132,21 @@ button.hide {
 
 .net-container {
     position: absolute;
-    bottom: 130px; /* Adjusts the position of the net image */
+    bottom: 130px;
     left: 52%;
     transform: translateX(-50%);
 }
 
 .difficulty-container {
-    margin-top: 20px; /* Adjust margin top as needed */
-    text-align: center; /* Center aligns inline elements */
-    padding: 20px; /* Adjust padding as needed */
+    margin-top: 20px;
+    text-align: center;
+    padding: 20px;
 }
 
 #easyButton,
 #hardButton {
-    display: inline-block; /* Display buttons inline with block-level features */
+    display: inline-block;
     width: 300px;
-    margin: 10px; /* Adjust margin between buttons */
     padding: 10px;
     font-size: 16px;
     background-color: #045484;
@@ -138,17 +165,15 @@ button.hide {
     background-color: #000000;
 }
 
-
-
-
 @media (max-width: 600px) {
     button {
         flex: 1 1 calc(50% - 1vh);
         max-width: calc(50% - 1vh);
+        margin-top: 5px;
     }
 
     .net-container {
-        bottom: 46%; /* Adjust for smaller screens if needed */
+        bottom: 40%;
         left: 53%;
     }
 }
