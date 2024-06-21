@@ -148,7 +148,7 @@ button.hide {
     }
 
     .net-container {
-        bottom: 125px; /* Adjust for smaller screens if needed */
+        bottom: 46%; /* Adjust for smaller screens if needed */
         left: 53%;
     }
 }
