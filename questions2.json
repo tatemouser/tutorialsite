@@ -1,17 +1,77 @@
 [
     {
-        "question": "What is the capital of France?",
+        "question": "Which pickleball tournament is considered the most prestigious in the world?",
+        "answers": ["US Open Pickleball Championships", "International Pickleball Classic", "Anytime I Play", "European Pickleball Masters"],
+        "correctIndex": 0
+    },
+    {
+        "question": "What is the minimum number of points a team must win by to secure a victory in a standard pickleball game?",
         "answers": ["1", "2", "3", "4"],
-        "correctAnswer": 2
+        "correctIndex": 1
     },
     {
-        "question": "Which planet is known as the Red Planet?",
-        "answers": ["4", "5", "6", "7"],
-        "correctAnswer": 1
+        "question": "In pickleball, what is the term for a shot that bounces close to the net and makes it difficult for the opponent to return?",
+        "answers": ["Kill Shot", "Splatter Shot", "Ninja Shot", "Cobra Shot"],
+        "correctIndex": 0
     },
     {
-        "question": "What is the largest ocean on Earth?",
-        "answers": ["1", " 2", "3", "5"],
-        "correctAnswer": 3
+        "question": "Which of these pickleball shots involves hitting the ball hard and downward, usually to end a point?",
+        "answers": ["Dink", "Lob", "Smash", "Drop Shot"],
+        "correctIndex": 2
+    },
+    {
+        "question": "In a pickleball game, what is the term for switching positions with your partner during the game?",
+        "answers": ["Flip", "Swap", "Stack", "Shuffle"],
+        "correctIndex": 2
+    },
+    {
+        "question": "",
+        "answers": ["Knuckle Shot", "Spinner Shot", "Slice Shot", "Curve Shot"],
+        "correctIndex": 2
+    },
+    {
+        "question": "",
+        "answers": ["International Pickleball Federation (IPF)", "World Pickleball Association (WPA)", "Global Pickleball League (GPL)", "USA Pickleball Association (USAPA)"],
+        "correctIndex": 3
+    },
+    {
+        "question": "",
+        "answers": ["Smash", "Dink", "Lob", "Drive"],
+        "correctIndex": 1
+    },
+    {
+        "question": "",
+        "answers": ["Short Serve", "Bounce Serve", "Underhand Serve", "Faulty Serve"],
+        "correctIndex": 0
+    },
+    {
+        "question": "What is the maximum speed in miles per hour that a pickleball serve is allowed to reach?",
+        "answers": ["10 mph", "15 mph", "20 mph", "25 mph"],
+        "correctIndex": 3
+    },
+    {
+        "question": "In doubles pickleball, what is the order of serving when a team first gains the serve?",
+        "answers": ["Right player, then left player", "Left player, then right player", "It does not matter", "Always the same player"],
+        "correctIndex": 1
+    },
+    {
+        "question": "",
+        "answers": ["Error", "Fault", "Mistake", "Miss"],
+        "correctIndex": 1
+    },
+    {
+        "question": "In pickleball, what does the term \"third shot drop\" refer to?",
+        "answers": ["The third shot of a rally", "A strategy to end a point quickly", "A soft shot played after the serve and return", "A shot that hits the top of the net and drops over"],
+        "correctIndex": 2
+    },
+    {
+        "question": "Which professional tennis player is known to have embraced pickleball and played in exhibitions?",
+        "answers": ["Serena Williams", "Roger Federer", "Rafael Nadal", "Novak Djokovic"],
+        "correctIndex": 1
+    },
+    {
+        "question": "",
+        "answers": ["Lob", "Spike", "Smash", "Drive"],
+        "correctIndex": 0
     }
 ]

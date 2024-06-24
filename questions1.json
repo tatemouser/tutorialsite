@@ -1,17 +1,77 @@
 [
     {
-        "question": "What is the capital of France?",
+        "question": "What is the standard length of a pickleball court?",
+        "answers": ["32 ft", "20 rackets", "42 ft", "44 ft"],
+        "correctIndex": 3
+    },
+    {
+        "question": "What is the name of the area close to the net where volleys are not allowed?",
+        "answers": ["The Stop Zone", "The Rest Zone", "The Kitchen", "The Pantry"],
+        "correctIndex": 2
+    },
+    {
+        "question": "",
         "answers": ["1", "2", "3", "4"],
-        "correctAnswer": 2
+        "correctIndex": 1
     },
     {
-        "question": "Which planet is known as the Red Planet?",
-        "answers": ["4", "5", "6", "7"],
-        "correctAnswer": 1
+        "question": "What material are pickleball paddles typically made of?",
+        "answers": ["Aluminum", "Wood", "Steel", "Graphite"],
+        "correctIndex": 3
     },
     {
-        "question": "What is the largest ocean on Earth?",
-        "answers": ["1", " 2", "3", "5"],
-        "correctAnswer": 3
+        "question": "",
+        "answers": ["Serving an ace", "Winning a rally", "Forcing an error from your opponent", "Hitting the net with your serve"],
+        "correctIndex": 3
+    },
+    {
+        "question": "",
+        "answers": ["Tennis, Badminton, Ping-Pong", "Soccer, Basketball, Golf", "Volleyball, Baseball, Hockey", "Swimming, Gymnastics, Cycling"],
+        "correctIndex": 0
+    },
+    {
+        "question": "What is the usual maximum number of points a game is played to in pickleball?",
+        "answers": ["10", "15", "21", "11"],
+        "correctIndex": 3
+    },
+    {
+        "question": "What is the name of the plastic ball used in pickleball?",
+        "answers": ["Yellow Ball", "Wiffle Ball", "Spike Ball", "Ping Ball"],
+        "correctIndex": 1
+    },
+    {
+        "question": "Which part of the paddle is typically used to hit a dink shot in pickleball?",
+        "answers": ["Handle", "Edge", "Sweet Spot", "Grip"],
+        "correctIndex": 2
+    },
+    {
+        "question": "What is a common strategy in pickleball to avoid smashing near the net?",
+        "answers": ["Dinking", "Power Serving", "Lobbing", "Spiking"],
+        "correctIndex": 0
+    },
+    {
+        "question": "",
+        "answers": ["To organize paddles neatly", "To switch sides with your partner", "To reposition players on the court", "To adjust the serving order for an advantage"],
+        "correctIndex": 3
+    },
+    {
+        "question": "",
+        "answers": ["1", "2", "3", "4"],
+        "correctIndex": 1
+    },
+    {
+        "question": "",
+        "answers": ["Slam", "Smash", "Dink", "Lob"],
+        "correctIndex": 2
+    },
+    {
+        "question": "What is the name of the line that divides the non-volley zone from the rest of the court in pickleball?",
+        "answers": ["The Net Line", "The Kitchen Line", "The Border Line", "The Baseline"],
+        "correctIndex": 1
+    },
+    {
+        "question": "",
+        "answers": ["The point is replayed", "The point goes to the server", "The point goes to the opponent", "The ball is considered out"],
+        "correctIndex": 3
     }
 ]
