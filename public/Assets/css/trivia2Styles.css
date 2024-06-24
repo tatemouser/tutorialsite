@@ -1,5 +1,50 @@
+.control-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+    width: 70%;
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 10px;
+}
+
+.control-button {
+    padding: 10px 20px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #002d4a;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    flex: 1 1 50px; /* Allows flexibility */
+    max-width: 200px; /* Ensures buttons don't get too wide */
+    
+}
+
+.control-button:hover {
+    background-color: #045484;
+}
+
+
+.question-text {
+    width: 70%;
+    min-width: 250px;
+    height: auto; /* Allow height to adjust based on content */
+    display: flex;
+    flex-direction: column; /* Align content vertically */
+    align-items: center; /* Center content horizontally */
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 10px;
+    position: relative; /* Make container a positioned element */
+    font-size: 2vw;
+    text-align: center; /* Center text within the container */
+}
+
+
 .question-container {
-    background-color: red;
+    background-color: gray;
     width: 70%;
     min-width: 250px;
     height: 20vw;
@@ -83,6 +128,11 @@
 }
 
 @media (max-width: 600px) {
+    .question-text {
+        font-size: 5vw;
+        height: 12vw;
+    }
+
     .question-container {
         height: 35vw; /* This will apply up to 600px */
     }
