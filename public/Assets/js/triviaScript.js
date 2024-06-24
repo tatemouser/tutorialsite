@@ -96,7 +96,9 @@ document.addEventListener('DOMContentLoaded', () => {
         questionElement.innerText = question.question;
         question.answers.forEach((answer, index) => {
             const button = document.createElement('button');
-            button.innerText = answer.text;
+            const span = document.createElement('span');
+            span.innerText = answer.text;
+            button.appendChild(span);
             button.classList.add('btn', 'btn-answer');
             if (index % 2 === 0) {
                 button.classList.add('btn-left');

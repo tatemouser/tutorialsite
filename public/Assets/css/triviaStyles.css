@@ -36,6 +36,7 @@ h1 {
 }
 
 #netImage {
+    opacity: 0;
     width: 1px;
 }
 
@@ -164,6 +165,30 @@ button.hide {
 #hardButton:hover {
     background-color: #000000;
 }
+
+.btn-answer span {
+    background-color: rgb(201, 201, 201); /* Highlight color */
+    border-radius: 5px;
+    padding: 5px 20px 5px 20px;
+    color: black;
+}
+
+#quiz-container .btn-answer.btn-left span {
+    margin-right: 1vw;
+}
+
+#quiz-container .btn-answer.btn-right span {
+    margin-left: 15vw;
+}
+
+#quiz-container .btn-answer.btn-left::after {
+    left: 60%;
+}
+
+#quiz-container .btn-answer.btn-right::after {
+    right: 60%;
+}
+
 
 @media (max-width: 600px) {
     button {
