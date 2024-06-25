@@ -10,23 +10,13 @@
         "correctIndex": 2
     },
     {
-        "question": "",
-        "answers": ["1", "2", "3", "4"],
-        "correctIndex": 1
-    },
-    {
         "question": "What material are pickleball paddles typically made of?",
         "answers": ["Aluminum", "Wood", "Steel", "Graphite"],
         "correctIndex": 3
     },
     {
-        "question": "",
-        "answers": ["Serving an ace", "Winning a rally", "Forcing an error from your opponent", "Hitting the net with your serve"],
-        "correctIndex": 3
-    },
-    {
-        "question": "",
-        "answers": ["Tennis, Badminton, Ping-Pong", "Soccer, Basketball, Golf", "Volleyball, Baseball, Hockey", "Swimming, Gymnastics, Cycling"],
+        "question": "Which type of pickeball has been played?",
+        "answers": ["Underwater Pickleball", "Cave Pickleball", "Blind Pickleball", "Airplane Pickleball"],
         "correctIndex": 0
     },
     {
@@ -50,19 +40,19 @@
         "correctIndex": 0
     },
     {
-        "question": "",
-        "answers": ["To organize paddles neatly", "To switch sides with your partner", "To reposition players on the court", "To adjust the serving order for an advantage"],
-        "correctIndex": 3
-    },
-    {
-        "question": "",
-        "answers": ["1", "2", "3", "4"],
+        "question": "How many people play pickleball?",
+        "answers": ["100,000+", "35,000,000+", "35,000+", "10,000,000+"],
         "correctIndex": 1
     },
     {
-        "question": "",
-        "answers": ["Slam", "Smash", "Dink", "Lob"],
-        "correctIndex": 2
+        "question": "Has there been a pickleball wedding?",
+        "answers": ["Yes!", "No way", "NO!", "Most likely"],
+        "correctIndex": 0
+    },
+    {
+        "question": "How long was the longest pickleball game?",
+        "answers": ["6 hours 11 minutes", "Over 3 days", "18 hours", "2 hours 1 minute"],
+        "correctIndex": 0
     },
     {
         "question": "What is the name of the line that divides the non-volley zone from the rest of the court in pickleball?",

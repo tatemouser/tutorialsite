@@ -75,21 +75,21 @@ document.addEventListener('DOMContentLoaded', () => {
         startButton.disabled = true;
         restartButton.disabled = true;
     }
-
+    
     function displayQuestion() {
         if (questions.length === 0) {
             console.log('No questions available.');
             return;
         }
-        
+
         const question = questions[currentQuestionIndex];
         const answers = question.answers;
 
         document.getElementById('question-text').innerText = question.question;
-        document.getElementById('question-button-1').innerText = answers[0];
-        document.getElementById('question-button-2').innerText = answers[1];
-        document.getElementById('question-button-3').innerText = answers[2];
-        document.getElementById('question-button-4').innerText = answers[3];
+        document.getElementById('question-button-1').querySelector('span').innerText = answers[0];
+        document.getElementById('question-button-2').querySelector('span').innerText = answers[1];
+        document.getElementById('question-button-3').querySelector('span').innerText = answers[2];
+        document.getElementById('question-button-4').querySelector('span').innerText = answers[3];
 
         console.log('Displaying question:', question.question);
 
@@ -106,6 +106,8 @@ document.addEventListener('DOMContentLoaded', () => {
     function handleAnswer(answerIndex) {
         const currentQuestion = questions[(currentQuestionIndex - 1 + questions.length) % questions.length];
         const correctAnswer = currentQuestion.correctAnswer;
+        const correctButton = document.getElementById(`question-button-${correctAnswer + 1}`);
+
         if (answerIndex === correctAnswer) {
             console.log('Correct answer!');
             correctCount++; // Increment correct answer count
@@ -113,8 +115,18 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log('Wrong answer.');
             wrongCount++; // Increment wrong answer count
         }
+
         updateScoreDisplay();
-        displayQuestion();
+        highlightCorrectAnswer(correctButton);
+    }
+
+    function highlightCorrectAnswer(correctButton) {
+        correctButton.style.backgroundColor = 'green';
+
+        setTimeout(() => {
+            correctButton.style.backgroundColor = ''; // Reset background color
+            displayQuestion();
+        }, 1000); // Wait for 2 seconds before displaying the next question
     }
 
     function updateScoreDisplay() {

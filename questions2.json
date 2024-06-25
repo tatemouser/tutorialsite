@@ -25,23 +25,23 @@
         "correctIndex": 2
     },
     {
-        "question": "",
-        "answers": ["Knuckle Shot", "Spinner Shot", "Slice Shot", "Curve Shot"],
-        "correctIndex": 2
-    },
-    {
-        "question": "",
-        "answers": ["International Pickleball Federation (IPF)", "World Pickleball Association (WPA)", "Global Pickleball League (GPL)", "USA Pickleball Association (USAPA)"],
-        "correctIndex": 3
-    },
-    {
-        "question": "",
-        "answers": ["Smash", "Dink", "Lob", "Drive"],
+        "question": "In 2023, how many new pickleball courts were made each day?",
+        "answers": ["0.5", "2", "10", "50"],
         "correctIndex": 1
     },
     {
-        "question": "",
-        "answers": ["Short Serve", "Bounce Serve", "Underhand Serve", "Faulty Serve"],
+        "question": "How long was the longest pickleball game?",
+        "answers": ["6 hours 11 minutes", "Over 3 days", "18 hours", "2 hours 1 minute"],
+        "correctIndex": 0
+    },
+    {
+        "question": "Who does not play pickleball?",
+        "answers": ["The Rock", "Bill Gates", "Leonardo DiCaprio", "Kim K"],
+        "correctIndex": 0
+    },
+    {
+        "question": "How many volleys was the longest pickleball game?",
+        "answers": ["30,576", "1,000", "100,201", "500"],
         "correctIndex": 0
     },
     {
@@ -55,9 +55,9 @@
         "correctIndex": 1
     },
     {
-        "question": "",
-        "answers": ["Error", "Fault", "Mistake", "Miss"],
-        "correctIndex": 1
+        "question": "Who invented pickleball?",
+        "answers": ["Wilson Co.", "A Tennis player", "A highschool project", "3 dads"],
+        "correctIndex": 3
     },
     {
         "question": "In pickleball, what does the term \"third shot drop\" refer to?",
@@ -70,8 +70,8 @@
         "correctIndex": 1
     },
     {
-        "question": "",
-        "answers": ["Lob", "Spike", "Smash", "Drive"],
+        "question": "How did pickleball get it's name??",
+        "answers": ["Dog named Pickles", "No origin", "Creator loved pickles", "Pickle factory sponsored the first court"],
         "correctIndex": 0
     }
 ]
