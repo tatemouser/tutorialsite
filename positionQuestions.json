@@ -1,0 +1,22 @@
+[
+    {
+        "question": "Place the pin in the top-left region",
+        "correctRegion": "top-left",
+        "regions": {
+            "top-left": { "xMinPercent": 0, "xMaxPercent": 50, "yMinPercent": 0, "yMaxPercent": 50 },
+            "top-right": { "xMinPercent": 50, "xMaxPercent": 100, "yMinPercent": 0, "yMaxPercent": 50 },
+            "bottom-left": { "xMinPercent": 0, "xMaxPercent": 50, "yMinPercent": 50, "yMaxPercent": 100 },
+            "bottom-right": { "xMinPercent": 50, "xMaxPercent": 100, "yMinPercent": 50, "yMaxPercent": 100 }
+        }
+    },
+    {
+        "question": "Place the pin in the bottom-right region",
+        "correctRegion": "bottom-right",
+        "regions": {
+            "top-left": { "xMinPercent": 0, "xMaxPercent": 50, "yMinPercent": 0, "yMaxPercent": 50 },
+            "top-right": { "xMinPercent": 50, "xMaxPercent": 100, "yMinPercent": 0, "yMaxPercent": 50 },
+            "bottom-left": { "xMinPercent": 0, "xMaxPercent": 50, "yMinPercent": 50, "yMaxPercent": 100 },
+            "bottom-right": { "xMinPercent": 50, "xMaxPercent": 100, "yMinPercent": 50, "yMaxPercent": 100 }
+        }
+    }
+]

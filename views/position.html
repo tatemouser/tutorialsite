@@ -1,0 +1,71 @@
+<!-- SHOW THE RIGHT ANSWERS -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position Game</title>
+    <link rel="stylesheet" href="../public/Assets/css/styles.css">
+    <link rel="stylesheet" href="../public/Assets/css/positionStyles.css">
+    <script src="../public/Assets/js/script.js"></script>
+    <script src="../public/Assets/js/positionScript.js"></script>
+</head>
+<body>
+    <header>
+        <div class="horizontal-layout">
+            <nav id="navLinks">
+                <a href="../index.html">HOME</a>
+                <a href="rules.html">RULES</a>
+                <a href="trivia.html">TRIVIA GAME</a>
+                <a href="position.html">POSITION GAME</a>
+                <a style="color: gray">DRAW DRILLS</a>
+                <a style="color: gray">MORE</a>
+            </nav>
+            <button class="dropdown-btn" onclick="toggleDropdown()">☰</button>
+        </div>
+    </header>
+
+    <div class="control-buttons">
+        <button id="start-button">Start</button>
+    </div>
+
+    <div id="question-container">
+        <p id="question-text" class="question-text"></p>
+    </div>
+
+    <div class="container">
+        <img id="map" class="image" src="../public/Assets/images/court.png" alt="Map">
+        <div id="pin" class="pin" style="display: none;"></div> <!-- Initial hidden pin -->
+    </div>
+
+    <div>
+        <label>Image Size:</label>
+        <span id="image-size"></span>
+    </div>
+
+    <div>
+        <label>Coordinates:</label>
+        <span id="coordinates"></span>
+    </div>
+
+    <div class="feedback" id="feedback"></div>
+
+
+
+
+    <div class="empty-container"></div>
+    <footer></footer>
+</body>
+</html>
+
+<!-- ,
+    {
+        "question": "Place the pin in the bottom-right region",
+        "correctRegion": "bottom-right",
+        "regions": {
+            "top-left": { "xMin": 0, "xMax": 100, "yMin": 0, "yMax": 100 },
+            "top-right": { "xMin": 101, "xMax": 200, "yMin": 0, "yMax": 100 },
+            "bottom-left": { "xMin": 0, "xMax": 100, "yMin": 101, "yMax": 200 },
+            "bottom-right": { "xMin": 101, "xMax": 200, "yMin": 101, "yMax": 200 }
+        }
+    } -->

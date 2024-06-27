@@ -1,0 +1,44 @@
+    /* Basic styling for the container and image */
+    .container {
+        position: relative;
+        width: 50vw; /* Adjust width and height as per your image size */
+        height: auto;
+        margin: 20px auto;
+        border: 1px solid #ccc;
+        overflow: hidden;
+    }
+    .image {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+    .pin {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background-color: red;
+        border-radius: 50%; /* Makes the pin round */
+        transform: translate(-50%, -50%); /* Center the pin on click */
+        cursor: pointer;
+    }
+    
+    .feedback {
+        margin-top: 20px;
+        font-size: 18px;
+    }
+    .question-text {
+        font-size: 18px;
+        font-weight: bold;
+        margin-top: 20px;
+    }
+
+    @media (max-width: 1200px) {
+        .container {
+            width: 60%; /* Adjust width and height as per your image size */
+        }
+    }
+    @media (max-width: 700px) {
+        .container {
+            width: 90%; /* Adjust width and height as per your image size */
+        }
+    }
