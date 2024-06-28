@@ -1,16 +1,66 @@
-    /* Basic styling for the container and image */
+    .control-buttons  {
+        margin-top: 20px;
+    }
+    /* Style for the start button */
+    #start-button {
+        padding: 15px 30px; /* Padding for button */
+        font-size: 18px; /* Font size */
+        font-weight: bold; /* Bold text */
+        color: #fff; /* Text color */
+        background-color: #002d4a; /* Blue background color */
+        border: none; /* No border */
+        border-radius: 10px; /* Rounded corners */
+        cursor: pointer; /* Pointer cursor */
+        transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+        /* Center align button */
+        display: block;
+        margin: 0 auto;
+    }
+
+    /* Hover effect for the start button */
+    #start-button:hover {
+        background-color: #0056b3; /* Darker blue on hover */
+    }
+
+    /* Style for the question text */
+    #question-text {
+        font-size: 24px; /* Larger font size */
+        margin-top: 20px; /* Space above question text */
+        text-align: center; /* Center align text */
+    }
+
+    /* Additional styles for the container */
+    .container {
+        position: relative; /* Relative positioning for absolute children */
+        margin-top: 20px; /* Space above container */
+    }
+
+    /* Styling for the feedback section */
+    .feedback {
+        margin-top: 10px; /* Space above feedback */
+        text-align: center; /* Center align text */
+    }
+
+    /* Label and span styling for size and coordinates */
+    label {
+        font-weight: bold; /* Bold label text */
+        margin-right: 5px; /* Space between label and span */
+    }
+
+
     .container {
         position: relative;
         width: 50vw; /* Adjust width and height as per your image size */
         height: auto;
         margin: 20px auto;
-        border: 1px solid #ccc;
         overflow: hidden;
     }
     .image {
         width: 100%;
         height: auto;
         display: block;
+        border-radius: 20px;
+        border: none; /* This ensures no border is displayed */
     }
     .pin {
         position: absolute;
@@ -21,6 +71,15 @@
         transform: translate(-50%, -50%); /* Center the pin on click */
         cursor: pointer;
     }
+
+    #image-size, #coordinates {
+        position: absolute;
+        left: -9999px;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+    } 
+
     
     .feedback {
         margin-top: 20px;

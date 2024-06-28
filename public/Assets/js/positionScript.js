@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const imageSizeDisplay = document.getElementById('image-size');
     const startButton = document.getElementById('start-button');
     const questionText = document.getElementById('question-text');
-    const feedbackDisplay = document.getElementById('feedback');
     const devButton = document.createElement('button');
     devButton.textContent = 'Toggle Correct Region';
     document.body.appendChild(devButton);
@@ -58,33 +57,35 @@ document.addEventListener('DOMContentLoaded', () => {
         imageSizeDisplay.textContent = `Width: ${mapWidth}px, Height: ${mapHeight}px`;
     }
 
-    // Function to handle start button click
     function handleStartButton() {
         if (questions.length === 0) {
             alert('Questions not loaded yet.');
             return;
         }
-
+    
+        // Clear the old correct region
+        if (correctRegionDiv) {
+            correctRegionDiv.remove();
+            correctRegionDiv = null;
+        }
+    
         // Pick a random question
         currentQuestion = questions[Math.floor(Math.random() * questions.length)];
-
+    
         // Display the question text
         questionText.textContent = currentQuestion.question;
-
+    
         // Allow pin dropping
         isClickable = true;
-
+    
         // Hide pin if it exists and clear coordinates display
         pin.style.display = 'none';
         coordinatesDisplay.textContent = '';
-        feedbackDisplay.textContent = '';
-
-        // Display the correct region for developer purposes
-        showCorrectRegion();
-
+    
         // Display images for the current question
         displayImages(currentQuestion.images);
     }
+    
 
     // Function to validate pin position
     function validatePinPosition() {
@@ -98,15 +99,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (isCorrect) {
             pin.style.backgroundColor = 'green';
-            feedbackDisplay.textContent = 'Correct!';
         } else {
             pin.style.backgroundColor = 'red';
-            feedbackDisplay.textContent = 'Wrong, try again!';
         }
+
+        highlightCorrectRegion();
     }
 
     // Function to convert percentage-based regions to pixel-based regions
-// Function to convert percentage-based regions to pixel-based regions
     function getRegionCoordinates(region) {
         return {
             xMin: mapWidth * (region.xPercent / 100),
@@ -115,7 +115,6 @@ document.addEventListener('DOMContentLoaded', () => {
             yMax: mapHeight * ((region.yPercent + region.heightPercent) / 100)
         };
     }
-
 
     // Function to display the correct region for development purposes
     function showCorrectRegion() {
@@ -128,21 +127,31 @@ document.addEventListener('DOMContentLoaded', () => {
 
         correctRegionDiv = document.createElement('div');
         correctRegionDiv.style.position = 'absolute';
-        correctRegionDiv.style.border = '2px dashed blue';
+        correctRegionDiv.style.backgroundColor = 'rgba(0, 255, 0, 0.2)'; // Transparent green
         correctRegionDiv.style.left = `${correctRegion.xMin}px`;
         correctRegionDiv.style.top = `${correctRegion.yMin}px`;
         correctRegionDiv.style.width = `${correctRegion.xMax - correctRegion.xMin}px`;
         correctRegionDiv.style.height = `${correctRegion.yMax - correctRegion.yMin}px`;
+        correctRegionDiv.style.pointerEvents = 'none'; // Ensure it doesn't interfere with clicking
 
         document.querySelector('.container').appendChild(correctRegionDiv);
     }
+
+    function highlightCorrectRegion() {
+        if (!correctRegionDiv) {
+            showCorrectRegion();
+        }
+        correctRegionDiv.style.backgroundColor = 'rgba(0, 255, 0, 0.4)'; // Highlight with a more opaque green
+    }
+    
+    
 
     // Function to display images for the current question
     function displayImages(images) {
         // Remove any existing images
         const existingImages = document.querySelectorAll('.dynamic-image');
         existingImages.forEach(image => image.remove());
-    
+
         // Add new images based on the current question
         images.forEach(imageData => {
             const img = document.createElement('img');
@@ -153,17 +162,15 @@ document.addEventListener('DOMContentLoaded', () => {
             img.style.top = `${mapHeight * (imageData.yPercent / 100)}px`;
             img.style.width = `${mapWidth * (imageData.widthPercent / 100)}px`;
             img.style.height = `${mapHeight * (imageData.heightPercent / 100)}px`;
-    
+
             if (imageData.rotation) {
                 img.style.transform = `rotate(${imageData.rotation}deg)`;
                 img.style.transformOrigin = 'center';
             }
-    
+
             document.querySelector('.container').appendChild(img);
         });
     }
-    
-    
 
     // Event listener for clicking on the map
     map.addEventListener('click', dropPin);

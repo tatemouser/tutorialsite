@@ -20,7 +20,6 @@
     transition: background-color 0.3s;
     flex: 1 1 50px; /* Allows flexibility */
     max-width: 200px; /* Ensures buttons don't get too wide */
-    
 }
 
 .control-button:hover {
@@ -43,7 +42,8 @@ button:disabled {
     justify-content: center; /* Center the content within the container */
     padding: 10px;
     position: relative; /* Make container a positioned element */
-}
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;}
 
 .question-text {
     width: 70%;
@@ -59,6 +59,7 @@ button:disabled {
     text-align: center; /* Center text within the container */
     background-color: gray;
     font-weight: bold;
+    color: white;
 }
 
 
@@ -74,6 +75,9 @@ button:disabled {
     position: relative; /* Make container a positioned element */
     font-weight: bold;
     gap: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    color: white;
 }
 
 .score-container span {
