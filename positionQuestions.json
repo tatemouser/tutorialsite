@@ -1,22 +1,109 @@
 [
     {
-        "question": "Place the pin in the top-left region",
+        "question": "When your opponent is serving to your teammate, where should you stand?",
         "correctRegion": "top-left",
         "regions": {
-            "top-left": { "xMinPercent": 0, "xMaxPercent": 50, "yMinPercent": 0, "yMaxPercent": 50 },
-            "top-right": { "xMinPercent": 50, "xMaxPercent": 100, "yMinPercent": 0, "yMaxPercent": 50 },
-            "bottom-left": { "xMinPercent": 0, "xMaxPercent": 50, "yMinPercent": 50, "yMaxPercent": 100 },
-            "bottom-right": { "xMinPercent": 50, "xMaxPercent": 100, "yMinPercent": 50, "yMaxPercent": 100 }
-        }
+            "top-left": { "xPercent": 20, "yPercent": 15, "widthPercent": 15, "heightPercent": 35 },
+            "top-right": { "xPercent": 80, "yPercent": 15, "widthPercent": 15, "heightPercent": 35 },
+            "bottom-left": { "xPercent": 20, "yPercent": 70, "widthPercent": 25, "heightPercent": 30 },
+            "bottom-right": { "xPercent": 80, "yPercent": 70, "widthPercent": 25, "heightPercent": 30 }
+        },
+        "images": [
+            { "src": "../public/Assets/images/leftDownPlayer.png", "xPercent": -5, "yPercent": 50, "widthPercent": 15, "heightPercent": 25 },
+            { "src": "../public/Assets/images/rightUpPlayer.png", "xPercent": 90, "yPercent": 5, "widthPercent": 12, "heightPercent": 25 },
+            { "src": "../public/Assets/images/rightDownPlayer.png", "xPercent": 90, "yPercent": 50, "widthPercent": 15, "heightPercent": 25 },
+            { "src": "../public/Assets/images/positionBall.png", "xPercent": 85, "yPercent": 32, "widthPercent": 3, "heightPercent": 3 },
+            { "src": "../public/Assets/images/positionArrow.png", "xPercent": 55, "yPercent": 40, "widthPercent": 30, "heightPercent": 5, "rotation": 160 }
+        ]
     },
     {
-        "question": "Place the pin in the bottom-right region",
-        "correctRegion": "bottom-right",
+        "question": "Where should you move to after hitting this ball?",
+        "correctRegion": "top-left",
         "regions": {
-            "top-left": { "xMinPercent": 0, "xMaxPercent": 50, "yMinPercent": 0, "yMaxPercent": 50 },
-            "top-right": { "xMinPercent": 50, "xMaxPercent": 100, "yMinPercent": 0, "yMaxPercent": 50 },
-            "bottom-left": { "xMinPercent": 0, "xMaxPercent": 50, "yMinPercent": 50, "yMaxPercent": 100 },
-            "bottom-right": { "xMinPercent": 50, "xMaxPercent": 100, "yMinPercent": 50, "yMaxPercent": 100 }
-        }
+            "top-left": { "xPercent": 20, "yPercent": 50, "widthPercent": 15, "heightPercent": 35 },
+            "top-right": { "xPercent": 80, "yPercent": 50, "widthPercent": 15, "heightPercent": 35 },
+            "bottom-left": { "xPercent": 20, "yPercent": 70, "widthPercent": 25, "heightPercent": 20 },
+            "bottom-right": { "xPercent": 80, "yPercent": 70, "widthPercent": 25, "heightPercent": 20 }
+        },
+        "images": [
+            { "src": "../public/Assets/images/leftUpPlayer.png", "xPercent": 3, "yPercent": 53, "widthPercent": 12, "heightPercent": 25 },
+            { "src": "../public/Assets/images/leftDownPlayer.png", "xPercent": 25, "yPercent": 20, "widthPercent": 15, "heightPercent": 25 },
+            { "src": "../public/Assets/images/rightDownPlayer.png", "xPercent": 90, "yPercent": 5, "widthPercent": 15, "heightPercent": 25 },
+            { "src": "../public/Assets/images/rightDownPlayer.png", "xPercent": 90, "yPercent": 50, "widthPercent": 15, "heightPercent": 25 },
+            { "src": "../public/Assets/images/positionBall.png", "xPercent": 68, "yPercent": 71, "widthPercent": 3, "heightPercent": 3 },
+            { "src": "../public/Assets/images/positionArrow.png", "xPercent": 20, "yPercent": 70, "widthPercent": 45, "heightPercent": 5, "rotation": 0 }
+        ]
+    },
+    {
+        "question": "Where should you hit when receiving this ball?",
+        "correctRegion": "top-left",
+        "regions": {
+            "top-left": { "xPercent": 80, "yPercent": 15, "widthPercent": 15, "heightPercent": 67 },
+            "top-right": { "xPercent": 80, "yPercent": 15, "widthPercent": 15, "heightPercent": 67 },
+            "bottom-left": { "xPercent": 80, "yPercent": 70, "widthPercent": 25, "heightPercent": 80 },
+            "bottom-right": { "xPercent": 80, "yPercent": 70, "widthPercent": 25, "heightPercent": 80 }
+        },
+        "images": [
+            { "src": "../public/Assets/images/leftUpPlayer.png", "xPercent": 25, "yPercent": 53, "widthPercent": 12, "heightPercent": 25 },
+            { "src": "../public/Assets/images/leftDownPlayer.png", "xPercent": 25, "yPercent": 20, "widthPercent": 15, "heightPercent": 25 },
+            { "src": "../public/Assets/images/rightDownPlayer.png", "xPercent": 90, "yPercent": 5, "widthPercent": 15, "heightPercent": 25 },
+            { "src": "../public/Assets/images/rightDownPlayer.png", "xPercent": 90, "yPercent": 50, "widthPercent": 15, "heightPercent": 25 },
+            { "src": "../public/Assets/images/positionBall.png", "xPercent": 57, "yPercent": 46, "widthPercent": 3, "heightPercent": 3 },
+            { "src": "../public/Assets/images/positionArrow.png", "xPercent": 60, "yPercent": 35, "widthPercent": 30, "heightPercent": 5, "rotation": 160 }
+        ]
+    },
+    {
+        "question": "Where should you hit when receiving this ball?",
+        "correctRegion": "top-left",
+        "regions": {
+            "top-left": { "xPercent": 50, "yPercent": 15, "widthPercent": 45, "heightPercent": 35 },
+            "top-right": { "xPercent": 50, "yPercent": 15, "widthPercent": 45, "heightPercent": 35 },
+            "bottom-left": { "xPercent": 80, "yPercent": 70, "widthPercent": 25, "heightPercent": 80 },
+            "bottom-right": { "xPercent": 80, "yPercent": 70, "widthPercent": 25, "heightPercent": 80 }
+        },
+        "images": [
+            { "src": "../public/Assets/images/leftUpPlayer.png", "xPercent": 25, "yPercent": 5, "widthPercent": 12, "heightPercent": 25 },
+            { "src": "../public/Assets/images/leftDownPlayer.png", "xPercent": 25, "yPercent": 45, "widthPercent": 15, "heightPercent": 25 },
+            { "src": "../public/Assets/images/rightDownPlayer.png", "xPercent": 90, "yPercent": 5, "widthPercent": 15, "heightPercent": 25 },
+            { "src": "../public/Assets/images/rightDownPlayer.png", "xPercent": 60, "yPercent": 35, "widthPercent": 15, "heightPercent": 25 },
+            { "src": "../public/Assets/images/positionBall.png", "xPercent": 59, "yPercent": 40, "widthPercent": 3, "heightPercent": 3 },
+            { "src": "../public/Assets/images/positionArrow.png", "xPercent": 40, "yPercent": 30, "widthPercent": 20, "heightPercent": 5, "rotation": 210 }
+        ]
+    },
+    {
+        "question": "When should you move after you receive this volley?",
+        "correctRegion": "top-left",
+        "regions": {
+            "top-left": { "xPercent": 0, "yPercent": 15, "widthPercent": 35, "heightPercent": 35 },
+            "top-right": { "xPercent": 0, "yPercent": 15, "widthPercent": 35, "heightPercent": 35 },
+            "bottom-left": { "xPercent": 10, "yPercent": 70, "widthPercent": 55, "heightPercent": 30 },
+            "bottom-right": { "xPercent": 80, "yPercent": 70, "widthPercent": 55, "heightPercent": 30 }
+        },
+        "images": [
+            { "src": "../public/Assets/images/leftDownPlayer.png", "xPercent": -5, "yPercent": 43, "widthPercent": 15, "heightPercent": 25 },
+            { "src": "../public/Assets/images/leftDownPlayer.png", "xPercent": -5, "yPercent": 70, "widthPercent": 15, "heightPercent": 25 },
+            { "src": "../public/Assets/images/rightUpPlayer.png", "xPercent": 90, "yPercent": 5, "widthPercent": 12, "heightPercent": 25 },
+            { "src": "../public/Assets/images/rightDownPlayer.png", "xPercent": 60, "yPercent": 50, "widthPercent": 15, "heightPercent": 25 },
+            { "src": "../public/Assets/images/positionBall.png", "xPercent": 85, "yPercent": 32, "widthPercent": 3, "heightPercent": 3 },
+            { "src": "../public/Assets/images/positionArrow.png", "xPercent": 55, "yPercent": 40, "widthPercent": 30, "heightPercent": 5, "rotation": 160 }
+        ]
+    },
+    {
+        "question": "Where is the safest place to hit this ball?",
+        "correctRegion": "top-left",
+        "regions": {
+            "top-left": { "xPercent": 50, "yPercent": 15, "widthPercent": 27, "heightPercent": 67 },
+            "top-right": { "xPercent": 50, "yPercent": 15, "widthPercent": 27, "heightPercent": 67 },
+            "bottom-left": { "xPercent": 80, "yPercent": 70, "widthPercent": 25, "heightPercent": 80 },
+            "bottom-right": { "xPercent": 80, "yPercent": 70, "widthPercent": 25, "heightPercent": 80 }
+        },
+        "images": [
+            { "src": "../public/Assets/images/leftUpPlayer.png", "xPercent": 0, "yPercent": 15, "widthPercent": 12, "heightPercent": 25 },
+            { "src": "../public/Assets/images/leftDownPlayer.png", "xPercent": 0, "yPercent": 45, "widthPercent": 15, "heightPercent": 25 },
+            { "src": "../public/Assets/images/rightDownPlayer.png", "xPercent": 60, "yPercent": 15, "widthPercent": 15, "heightPercent": 25 },
+            { "src": "../public/Assets/images/rightDownPlayer.png", "xPercent": 60, "yPercent": 50, "widthPercent": 15, "heightPercent": 25 },
+            { "src": "../public/Assets/images/positionBall.png", "xPercent": 55, "yPercent": 55, "widthPercent": 3, "heightPercent": 3 },
+            { "src": "../public/Assets/images/positionArrow.png", "xPercent": 25, "yPercent": 45, "widthPercent": 30, "heightPercent": 5, "rotation": 200 }
+        ]
     }
 ]

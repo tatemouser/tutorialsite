@@ -81,6 +81,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Display the correct region for developer purposes
         showCorrectRegion();
+
+        // Display images for the current question
+        displayImages(currentQuestion.images);
     }
 
     // Function to validate pin position
@@ -103,14 +106,16 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Function to convert percentage-based regions to pixel-based regions
+// Function to convert percentage-based regions to pixel-based regions
     function getRegionCoordinates(region) {
         return {
-            xMin: mapWidth * (region.xMinPercent / 100),
-            xMax: mapWidth * (region.xMaxPercent / 100),
-            yMin: mapHeight * (region.yMinPercent / 100),
-            yMax: mapHeight * (region.yMaxPercent / 100)
+            xMin: mapWidth * (region.xPercent / 100),
+            xMax: mapWidth * ((region.xPercent + region.widthPercent) / 100),
+            yMin: mapHeight * (region.yPercent / 100),
+            yMax: mapHeight * ((region.yPercent + region.heightPercent) / 100)
         };
     }
+
 
     // Function to display the correct region for development purposes
     function showCorrectRegion() {
@@ -131,6 +136,34 @@ document.addEventListener('DOMContentLoaded', () => {
 
         document.querySelector('.container').appendChild(correctRegionDiv);
     }
+
+    // Function to display images for the current question
+    function displayImages(images) {
+        // Remove any existing images
+        const existingImages = document.querySelectorAll('.dynamic-image');
+        existingImages.forEach(image => image.remove());
+    
+        // Add new images based on the current question
+        images.forEach(imageData => {
+            const img = document.createElement('img');
+            img.src = imageData.src;
+            img.classList.add('dynamic-image');
+            img.style.position = 'absolute';
+            img.style.left = `${mapWidth * (imageData.xPercent / 100)}px`;
+            img.style.top = `${mapHeight * (imageData.yPercent / 100)}px`;
+            img.style.width = `${mapWidth * (imageData.widthPercent / 100)}px`;
+            img.style.height = `${mapHeight * (imageData.heightPercent / 100)}px`;
+    
+            if (imageData.rotation) {
+                img.style.transform = `rotate(${imageData.rotation}deg)`;
+                img.style.transformOrigin = 'center';
+            }
+    
+            document.querySelector('.container').appendChild(img);
+        });
+    }
+    
+    
 
     // Event listener for clicking on the map
     map.addEventListener('click', dropPin);
