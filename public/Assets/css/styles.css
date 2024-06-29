@@ -60,11 +60,13 @@ header nav a {
 
 .headerImage {
   width: auto;
-  height: 90%;
-  position: absolute;
-  left: 1vw;
-  z-index: 10;
+  height: 60px;
+  position: fixed; /* 'fixed' ensures it stays in the same position relative to the viewport */
+  top: 10px; /* Aligns the image to the top */
+  left: 10px; /* Aligns the image to the left */
+  z-index: 1000; /* Ensures it stays above other elements */
 }
+
 
 main {
   padding: 2rem;
