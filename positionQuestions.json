@@ -17,7 +17,7 @@
         ]
     },
     {
-        "question": "Where should you move to after hitting this ball?",
+        "question": "You are hitting the ball straight, where should you move after?",
         "correctRegion": "top-left",
         "regions": {
             "top-left": { "xPercent": 20, "yPercent": 50, "widthPercent": 15, "heightPercent": 35 },
@@ -89,7 +89,7 @@
         ]
     },
     {
-        "question": "Where is the safest place to hit this ball?",
+        "question": "The ball is being hit to you. Where is the safest place to hit this ball?",
         "correctRegion": "top-left",
         "regions": {
             "top-left": { "xPercent": 50, "yPercent": 15, "widthPercent": 27, "heightPercent": 67 },

@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     devButton.textContent = 'Toggle Correct Region';
     document.body.appendChild(devButton);
     let questions = [];
+    let currentQuestionIndex = 0; // Keep track of the current question index
     let currentQuestion = null;
     let pinPosition = { x: 0, y: 0 };
     let isClickable = false;
@@ -62,30 +63,30 @@ document.addEventListener('DOMContentLoaded', () => {
             alert('Questions not loaded yet.');
             return;
         }
-    
+
         // Clear the old correct region
         if (correctRegionDiv) {
             correctRegionDiv.remove();
             correctRegionDiv = null;
         }
-    
-        // Pick a random question
-        currentQuestion = questions[Math.floor(Math.random() * questions.length)];
-    
+
+        // Pick the next question
+        currentQuestion = questions[currentQuestionIndex];
+        currentQuestionIndex = (currentQuestionIndex + 1) % questions.length; // Increment and wrap around
+
         // Display the question text
         questionText.textContent = currentQuestion.question;
-    
+
         // Allow pin dropping
         isClickable = true;
-    
+
         // Hide pin if it exists and clear coordinates display
         pin.style.display = 'none';
         coordinatesDisplay.textContent = '';
-    
+
         // Display images for the current question
         displayImages(currentQuestion.images);
     }
-    
 
     // Function to validate pin position
     function validatePinPosition() {
@@ -143,8 +144,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         correctRegionDiv.style.backgroundColor = 'rgba(0, 255, 0, 0.4)'; // Highlight with a more opaque green
     }
-    
-    
 
     // Function to display images for the current question
     function displayImages(images) {
